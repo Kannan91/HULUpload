@@ -12,6 +12,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -170,8 +171,12 @@ public class MainController {
         	ArrayList dataHolder=data; 
         	conn = DBconnection.createDbConn();
     		try {
-    			String sql= "insert into input_parameter(Source_Type, Source, SKU, SKU_Name, Location, Location_Type, Location_Layer, Category, Service_Level, SKU_Classification, Production_Time, QA_Time, Transit_Time, Planning_Period, Frozen_Period, OR_Value, Other_Lead_Time, Lead_Time_Variability, Current_SSWeeks, Price) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-				pstmt=conn.prepareStatement(sql);
+    			//String sql= "insert into input_parameter(Source_Type, Source, SKU, SKU_Name, Location, Location_Type, Location_Layer, Category, Service_Level, SKU_Classification, Production_Time, QA_Time, Transit_Time, Planning_Period, Frozen_Period, OR_Value, Other_Lead_Time, Lead_Time_Variability, Current_SSWeeks, Price) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+				    
+    			/* Timestamp Changes - Start*/
+    			String sql= "insert into input_parameter(Source_Type, Source, SKU, SKU_Name, Location, Location_Type, Location_Layer, Category, Service_Level, SKU_Classification, Production_Time, QA_Time, Transit_Time, Planning_Period, Frozen_Period, OR_Value, Other_Lead_Time, Lead_Time_Variability, Current_SSWeeks, Price, CurrentDate) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    			/* Timestamp Changes - End*/
+    			    pstmt=conn.prepareStatement(sql);
 					System.out.println("ArrayList:" +dataHolder);
 					pstmt.setString(1, data.get(0).toString());
 					pstmt.setString(2, data.get(1).toString());
@@ -201,8 +206,10 @@ public class MainController {
 					pstmt.setFloat(18, Float.parseFloat(data.get(17).toString()));
 					pstmt.setFloat(19, Float.parseFloat(data.get(18).toString()));
 					pstmt.setFloat(20, Float.parseFloat(data.get(19).toString()));
-
-				 pstmt.executeUpdate();
+					/* Timestamp Changes - Start*/
+					pstmt.setTimestamp(21, new Timestamp(System.currentTimeMillis()));
+					/* Timestamp Changes - End*/
+				    pstmt.executeUpdate();
 
 				 String skuCode=data.get(2).toString()+"-"+data.get(4).toString();
 				 float avgTime =(Float.parseFloat(dataHolder.get(10).toString())/2)+(Float.parseFloat(dataHolder.get(11).toString()))+(Float.parseFloat(dataHolder.get(12).toString()))+(Float.parseFloat(dataHolder.get(13).toString()))+(Float.parseFloat(dataHolder.get(16).toString()));
@@ -239,8 +246,12 @@ public class MainController {
        	conn = DBconnection.createDbConn();
    		try {
 
-   			String sql= "insert into Past_Forecast(SKU, LOCATION, Week35_2016, Week36_2016, Week37_2016, Week38_2016, Week39_2016, Week40_2016, Week41_2016, Week42_2016, Week43_2016, Week44_2016, Week45_2016, Week46_2016, Week47_2016, Week48_2016, Week49_2016, Week50_2016, Week51_2016, Week52_2016, Week01_2017, Week02_2017, Week03_2017, Week04_2017, Week05_2017, Week06_2017, Week07_2017, Week08_2017, Week09_2017, Week10_2017, Week11_2017, Week12_2017, Week13_2017, Week14_2017, Week15_2017, Week16_2017, Week17_2017, Week18_2017)values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-				pstmt=conn.prepareStatement(sql);
+   			//String sql= "insert into Past_Forecast(SKU, LOCATION, Week35_2016, Week36_2016, Week37_2016, Week38_2016, Week39_2016, Week40_2016, Week41_2016, Week42_2016, Week43_2016, Week44_2016, Week45_2016, Week46_2016, Week47_2016, Week48_2016, Week49_2016, Week50_2016, Week51_2016, Week52_2016, Week01_2017, Week02_2017, Week03_2017, Week04_2017, Week05_2017, Week06_2017, Week07_2017, Week08_2017, Week09_2017, Week10_2017, Week11_2017, Week12_2017, Week13_2017, Week14_2017, Week15_2017, Week16_2017, Week17_2017, Week18_2017)values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+   			/* Timestamp Changes - Start*/
+			String sql= "insert into Past_Forecast(SKU, LOCATION, Week35_2016, Week36_2016, Week37_2016, Week38_2016, Week39_2016, Week40_2016, Week41_2016, Week42_2016, Week43_2016, Week44_2016, Week45_2016, Week46_2016, Week47_2016, Week48_2016, Week49_2016, Week50_2016, Week51_2016, Week52_2016, Week01_2017, Week02_2017, Week03_2017, Week04_2017, Week05_2017, Week06_2017, Week07_2017, Week08_2017, Week09_2017, Week10_2017, Week11_2017, Week12_2017, Week13_2017, Week14_2017, Week15_2017, Week16_2017, Week17_2017, Week18_2017,CurrentDate)values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+			/* Timestamp Changes - End*/
+   			   
+   				pstmt=conn.prepareStatement(sql);
 
 				pstmt.setString(1, data.get(0).toString());
 				pstmt.setString(2, data.get(1).toString());
@@ -280,6 +291,9 @@ public class MainController {
 				pstmt.setFloat(36, Float.parseFloat(data.get(35).toString()));
 				pstmt.setFloat(37, Float.parseFloat(data.get(36).toString()));
 				pstmt.setFloat(38, Float.parseFloat(data.get(37).toString()));
+				/* Timestamp Changes - Start*/
+				pstmt.setTimestamp(39, new Timestamp(System.currentTimeMillis()));
+				/* Timestamp Changes - End*/
 
 				pstmt.executeUpdate();
 
@@ -312,7 +326,10 @@ public class MainController {
 			ArrayList dataHolder = data;
 			conn = DBconnection.createDbConn();
 			try {
-				String sql = "insert into Past_Sales(SKU, LOCATION, Week35_2016, Week36_2016, Week37_2016, Week38_2016, Week39_2016, Week40_2016, Week41_2016, Week42_2016, Week43_2016, Week44_2016, Week45_2016, Week46_2016, Week47_2016, Week48_2016, Week49_2016, Week50_2016, Week51_2016, Week52_2016, Week01_2017, Week02_2017, Week03_2017, Week04_2017, Week05_2017, Week06_2017, Week07_2017, Week08_2017, Week09_2017, Week10_2017, Week11_2017, Week12_2017, Week13_2017, Week14_2017, Week15_2017, Week16_2017, Week17_2017, Week18_2017)values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+				//String sql = "insert into Past_Sales(SKU, LOCATION, Week35_2016, Week36_2016, Week37_2016, Week38_2016, Week39_2016, Week40_2016, Week41_2016, Week42_2016, Week43_2016, Week44_2016, Week45_2016, Week46_2016, Week47_2016, Week48_2016, Week49_2016, Week50_2016, Week51_2016, Week52_2016, Week01_2017, Week02_2017, Week03_2017, Week04_2017, Week05_2017, Week06_2017, Week07_2017, Week08_2017, Week09_2017, Week10_2017, Week11_2017, Week12_2017, Week13_2017, Week14_2017, Week15_2017, Week16_2017, Week17_2017, Week18_2017)values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+				/* Timestamp Changes - Start*/
+	   			String sql= "insert into Past_Sales(SKU, LOCATION, Week35_2016, Week36_2016, Week37_2016, Week38_2016, Week39_2016, Week40_2016, Week41_2016, Week42_2016, Week43_2016, Week44_2016, Week45_2016, Week46_2016, Week47_2016, Week48_2016, Week49_2016, Week50_2016, Week51_2016, Week52_2016, Week01_2017, Week02_2017, Week03_2017, Week04_2017, Week05_2017, Week06_2017, Week07_2017, Week08_2017, Week09_2017, Week10_2017, Week11_2017, Week12_2017, Week13_2017, Week14_2017, Week15_2017, Week16_2017, Week17_2017, Week18_2017, CurrentDate)values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+	   			/* Timestamp Changes - End*/
 				pstmt = conn.prepareStatement(sql);
 
 				pstmt.setString(1, data.get(0).toString());
@@ -353,7 +370,9 @@ public class MainController {
 				pstmt.setFloat(36, Float.parseFloat(data.get(35).toString()));
 				pstmt.setFloat(37, Float.parseFloat(data.get(36).toString()));
 				pstmt.setFloat(38, Float.parseFloat(data.get(37).toString()));
-
+				/* Timestamp Changes - Start*/
+				pstmt.setTimestamp(39, new Timestamp(System.currentTimeMillis()));
+				/* Timestamp Changes - End*/
 				pstmt.executeUpdate();
 
 				String skuCode = data.get(0).toString() + "-" + data.get(1).toString();
@@ -383,7 +402,10 @@ public class MainController {
 			ArrayList dataHolder = data;
 			conn = DBconnection.createDbConn();
 			try {
-				String sql = "insert into Future_Forecast(Basepack, Basepack_Desc, Material, Material_Desc, Depot, Depot_Desc, Week_201727, Week_201728, Week_201729, Week_201730, Week_201731, Week_201732, Week_201733, Week_201734, Week_201735)values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+				//String sql = "insert into Future_Forecast(Basepack, Basepack_Desc, Material, Material_Desc, Depot, Depot_Desc, Week_201727, Week_201728, Week_201729, Week_201730, Week_201731, Week_201732, Week_201733, Week_201734, Week_201735)values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+				/* Timestamp Changes - Start*/
+	  			String sql= "insert into Future_Forecast(Basepack, Basepack_Desc, Material, Material_Desc, Depot, Depot_Desc, Week_201727, Week_201728, Week_201729, Week_201730, Week_201731, Week_201732, Week_201733, Week_201734, Week_201735, CurrentDate)values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+	  			/* Timestamp Changes - End*/
 				pstmt = conn.prepareStatement(sql);
 
 				pstmt.setString(1, data.get(0).toString());
@@ -401,6 +423,9 @@ public class MainController {
 				pstmt.setFloat(13, Float.parseFloat(data.get(12).toString()));
 				pstmt.setFloat(14, Float.parseFloat(data.get(13).toString()));
 				pstmt.setFloat(15, Float.parseFloat(data.get(14).toString()));
+				/* Timestamp Changes - Start*/
+				pstmt.setTimestamp(16, new Timestamp(System.currentTimeMillis()));
+				/* Timestamp Changes - End*/
 
 				pstmt.executeUpdate();
 
