@@ -22,6 +22,8 @@ import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -73,9 +75,10 @@ public class MainController {
 	 * @return An http OK status in case of success, an http 4xx status in case
 	 *         of errors.
 	 */
-	@RequestMapping(value = "/uploadFile", method = RequestMethod.POST)
+	@CrossOrigin
+	@RequestMapping(value = "/uploadFile/{username}", method = RequestMethod.POST)
 	@ResponseBody
-	public ResponseEntity<?> uploadFile(@RequestParam("uploadfile") MultipartFile uploadfile) {
+	public ResponseEntity<?> uploadFile(@RequestParam("uploadfile") MultipartFile uploadfile, @PathVariable String username) {
 
 		try {
 
