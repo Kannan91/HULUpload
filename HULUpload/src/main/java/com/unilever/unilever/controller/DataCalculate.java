@@ -169,42 +169,42 @@ public class DataCalculate {
 				double bias_172017 = Math.abs(Fore_172017 - sale_172017);
 				double bias_182017 = Math.abs(Fore_182017 - sale_182017);
 
-				double biasPerc_352016 = RoundTo2Decimals((bias_352016 / Fore_352016) * 100);
-				double biasPerc_362016 = RoundTo2Decimals((bias_362016 / Fore_362016) * 100);
-				double biasPerc_372016 = RoundTo2Decimals((bias_372016 / Fore_372016) * 100);
-				double biasPerc_382016 = RoundTo2Decimals((bias_382016 / Fore_382016) * 100);
-				double biasPerc_392016 = RoundTo2Decimals((bias_392016 / Fore_392016) * 100);
-				double biasPerc_402016 = RoundTo2Decimals((bias_402016 / Fore_402016) * 100);
-				double biasPerc_412016 = RoundTo2Decimals((bias_412016 / Fore_412016) * 100);
-				double biasPerc_422016 = RoundTo2Decimals((bias_422016 / Fore_422016) * 100);
-				double biasPerc_432016 = RoundTo2Decimals((bias_432016 / Fore_432016) * 100);
-				double biasPerc_442016 = RoundTo2Decimals((bias_442016 / Fore_442016) * 100);
-				double biasPerc_452016 = RoundTo2Decimals((bias_452016 / Fore_452016) * 100);
-				double biasPerc_462016 = RoundTo2Decimals((bias_462016 / Fore_462016) * 100);
-				double biasPerc_472016 = RoundTo2Decimals((bias_472016 / Fore_472016) * 100);
-				double biasPerc_482016 = RoundTo2Decimals((bias_482016 / Fore_482016) * 100);
-				double biasPerc_492016 = RoundTo2Decimals((bias_492016 / Fore_492016) * 100);
-				double biasPerc_502016 = RoundTo2Decimals((bias_502016 / Fore_502016) * 100);
-				double biasPerc_512016 = RoundTo2Decimals((bias_512016 / Fore_512016) * 100);
-				double biasPerc_522016 = RoundTo2Decimals((bias_522016 / Fore_522016) * 100);
-				double biasPerc_012017 = RoundTo2Decimals((bias_012017 / Fore_012017) * 100);
-				double biasPerc_022017 = RoundTo2Decimals((bias_022017 / Fore_022017) * 100);
-				double biasPerc_032017 = RoundTo2Decimals((bias_032017 / Fore_032017) * 100);
-				double biasPerc_042017 = RoundTo2Decimals((bias_042017 / Fore_042017) * 100);
-				double biasPerc_052017 = RoundTo2Decimals((bias_052017 / Fore_052017) * 100);
-				double biasPerc_062017 = RoundTo2Decimals((bias_062017 / Fore_062017) * 100);
-				double biasPerc_072017 = RoundTo2Decimals((bias_072017 / Fore_072017) * 100);
-				double biasPerc_082017 = RoundTo2Decimals((bias_082017 / Fore_082017) * 100);
-				double biasPerc_092017 = RoundTo2Decimals((bias_092017 / Fore_092017) * 100);
-				double biasPerc_102017 = RoundTo2Decimals((bias_102017 / Fore_102017) * 100);
-				double biasPerc_112017 = RoundTo2Decimals((bias_112017 / Fore_112017) * 100);
-				double biasPerc_122017 = RoundTo2Decimals((bias_122017 / Fore_122017) * 100);
-				double biasPerc_132017 = RoundTo2Decimals((bias_132017 / Fore_132017) * 100);
-				double biasPerc_142017 = RoundTo2Decimals((bias_142017 / Fore_142017) * 100);
-				double biasPerc_152017 = RoundTo2Decimals((bias_152017 / Fore_152017) * 100);
-				double biasPerc_162017 = RoundTo2Decimals((bias_162017 / Fore_162017) * 100);
-				double biasPerc_172017 = RoundTo2Decimals((bias_172017 / Fore_172017) * 100);
-				double biasPerc_182017 = RoundTo2Decimals((bias_182017 / Fore_182017) * 100);
+				double biasPerc_352016 = Math.round((bias_352016 / Fore_352016) * 100);
+				double biasPerc_362016 = Math.round((bias_362016 / Fore_362016) * 100);
+				double biasPerc_372016 = Math.round((bias_372016 / Fore_372016) * 100);
+				double biasPerc_382016 = Math.round((bias_382016 / Fore_382016) * 100);
+				double biasPerc_392016 = Math.round((bias_392016 / Fore_392016) * 100);
+				double biasPerc_402016 = Math.round((bias_402016 / Fore_402016) * 100);
+				double biasPerc_412016 = Math.round((bias_412016 / Fore_412016) * 100);
+				double biasPerc_422016 = Math.round((bias_422016 / Fore_422016) * 100);
+				double biasPerc_432016 = Math.round((bias_432016 / Fore_432016) * 100);
+				double biasPerc_442016 = Math.round((bias_442016 / Fore_442016) * 100);
+				double biasPerc_452016 = Math.round((bias_452016 / Fore_452016) * 100);
+				double biasPerc_462016 = Math.round((bias_462016 / Fore_462016) * 100);
+				double biasPerc_472016 = Math.round((bias_472016 / Fore_472016) * 100);
+				double biasPerc_482016 = Math.round((bias_482016 / Fore_482016) * 100);
+				double biasPerc_492016 = Math.round((bias_492016 / Fore_492016) * 100);
+				double biasPerc_502016 = Math.round((bias_502016 / Fore_502016) * 100);
+				double biasPerc_512016 = Math.round((bias_512016 / Fore_512016) * 100);
+				double biasPerc_522016 = Math.round((bias_522016 / Fore_522016) * 100);
+				double biasPerc_012017 = Math.round((bias_012017 / Fore_012017) * 100);
+				double biasPerc_022017 = Math.round((bias_022017 / Fore_022017) * 100);
+				double biasPerc_032017 = Math.round((bias_032017 / Fore_032017) * 100);
+				double biasPerc_042017 = Math.round((bias_042017 / Fore_042017) * 100);
+				double biasPerc_052017 = Math.round((bias_052017 / Fore_052017) * 100);
+				double biasPerc_062017 = Math.round((bias_062017 / Fore_062017) * 100);
+				double biasPerc_072017 = Math.round((bias_072017 / Fore_072017) * 100);
+				double biasPerc_082017 = Math.round((bias_082017 / Fore_082017) * 100);
+				double biasPerc_092017 = Math.round((bias_092017 / Fore_092017) * 100);
+				double biasPerc_102017 = Math.round((bias_102017 / Fore_102017) * 100);
+				double biasPerc_112017 = Math.round((bias_112017 / Fore_112017) * 100);
+				double biasPerc_122017 = Math.round((bias_122017 / Fore_122017) * 100);
+				double biasPerc_132017 = Math.round((bias_132017 / Fore_132017) * 100);
+				double biasPerc_142017 = Math.round((bias_142017 / Fore_142017) * 100);
+				double biasPerc_152017 = Math.round((bias_152017 / Fore_152017) * 100);
+				double biasPerc_162017 = Math.round((bias_162017 / Fore_162017) * 100);
+				double biasPerc_172017 = Math.round((bias_172017 / Fore_172017) * 100);
+				double biasPerc_182017 = Math.round((bias_182017 / Fore_182017) * 100);
 
 				double biasPersale_352016 = (biasPerc_352016 / 100) * sale_352016;
 				double biasPersale_362016 = (biasPerc_362016 / 100) * sale_362016;
@@ -267,17 +267,17 @@ public class DataCalculate {
 								+ biasPersale_112017 + biasPersale_122017 + biasPersale_132017 + biasPersale_142017
 								+ biasPersale_152017 + biasPersale_162017 + biasPersale_172017 + biasPersale_182017);
 
-				double mape = RoundTo2Decimals((biasPerSale / totalSales) * 100);
+				double mape = Math.round((biasPerSale / totalSales) * 100);
 
 				double factor = Math.sqrt(10 / 7);
 
-				double avgForecast = RoundTo2Decimals(totalForecast / 36);
+				double avgForecast = Math.round(totalForecast / 36);
 
-				double weeklyAvgForecast = RoundTo2Decimals(avgForecast * 0.7);
+				double weeklyAvgForecast = Math.round(avgForecast * 0.7);
 
-				double sdfePerc = RoundTo2Decimals(mape * 1.25 * factor);
+				double sdfePerc = Math.round(mape * 1.25 * factor);
 
-				double sdfe = RoundTo2Decimals((avgForecast / sdfePerc) * 100);
+				double sdfe = Math.round((avgForecast / sdfePerc) * 100);
 
 				System.out.println("totalForecast :" + totalForecast + "avgForecast :" + avgForecast
 						+ "weeklyAvgForecast : " + weeklyAvgForecast + "factor :" + factor + "totalForecast:"
@@ -458,10 +458,10 @@ public class DataCalculate {
 					String skuName = rs2.getString(18);
 
 					float lotSize = cycleTime * avgWeeklyDemand;
-					double SdVariability = RoundTo2Decimals(Math.sqrt(((Math.pow(sdfe, 2)) * (avgLeadTime))
+					double SdVariability = Math.round(Math.sqrt(((Math.pow(sdfe, 2)) * (avgLeadTime))
 							+ Math.pow(((avgWeeklyDemand) * (leadTimeVariability)), 2) + Math.pow(avgWeeklyDemand, 2)
 									* Math.pow(1.25, 2) * Math.pow((cycleTime * (1 - (orValue / 100))), 2)));
-					double cFactorSales = RoundTo2Decimals(0.92
+					double cFactorSales = Math.round(0.92
 							+ Math.log(avgWeeklyDemand * cycleTime * ((1 - (serviceLevel / 100)) / SdVariability)));
 					double kFactorSales = Math
 							.round(-1.19 + Math.sqrt(((Math.pow(1.19, 2)) - 4 * 0.37 * cFactorSales) / (2 * 0.37)));
@@ -598,8 +598,8 @@ public class DataCalculate {
 		}
 	}
 	
-	static double RoundTo2Decimals(double val) {
+	/*static double Math.round(double val) {
         DecimalFormat df2 = new DecimalFormat("###.##");
     return Double.valueOf(df2.format(val));
-}
+}*/
 }
