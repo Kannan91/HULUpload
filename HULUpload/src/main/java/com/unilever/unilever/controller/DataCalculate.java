@@ -467,7 +467,7 @@ public class DataCalculate {
 							.round(-1.19 + Math.sqrt(((Math.pow(1.19, 2)) - 4 * 0.37 * cFactorSales) / (2 * 0.37)));
 					// double cycleServiceLevel =
 					// d.cumulativeProbability(kFactorSales);
-					double cycleServiceLevel = 0;
+					long cycleServiceLevel = 0;
 					double modelSafetyStock = 0;
 					if (avgWeeklyDemand == 0) {
 						modelSafetyStock = 0;
@@ -528,7 +528,7 @@ public class DataCalculate {
 					pstmt2.setString(8, category);
 					pstmt2.setInt(9, serviceLevel);
 					pstmt2.setFloat(10, avgWeeklyDemand);
-					pstmt2.setInt(11, sdfePerc1);
+					pstmt2.setFloat(11, sdfePerc1);
 					pstmt2.setDouble(12, sdfe);
 					pstmt2.setDouble(13, lotSize);
 					pstmt2.setInt(14, orValue);
@@ -538,7 +538,7 @@ public class DataCalculate {
 					pstmt2.setDouble(18, SdVariability);
 					pstmt2.setDouble(19, cFactorSales);
 					pstmt2.setDouble(20, kFactorSales);
-					pstmt2.setDouble(21, cycleServiceLevel);
+					pstmt2.setLong(21, cycleServiceLevel);
 					pstmt2.setDouble(22, 0);
 					pstmt2.setInt(23, 0);
 					pstmt2.setInt(24, 0);
