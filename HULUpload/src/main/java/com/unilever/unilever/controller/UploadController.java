@@ -186,7 +186,7 @@ public class UploadController {
 						+ Float.parseFloat(data[14].toString())) / 2;
 				line = line.replaceAll("%", "");
 				// System.out.println(line);
-				line = line + "," + new Date() + ",Kannan,0,0," + data[0] + "-" + data[4] + "," + avgForecast + "\n";
+				line = line + "," + new Date() + ",puser,0,0," + data[0] + "-" + data[4] + "," + avgForecast + "\n";
 				bw.write(line);
 			}
 			bw.close();
@@ -225,7 +225,7 @@ public class UploadController {
 				String[] data = line.split(",");
 				line = line.replaceAll("%", "");
 				// System.out.println(line);
-				line = line + "," + new Date() + ",Kannan,0,0," + data[0] + "-" + data[1] + "\n";
+				line = line + "," + new Date() + ",puser,0,0," + data[0] + "-" + data[1] + "\n";
 				bw.write(line);
 			}
 			bw.close();
@@ -265,7 +265,7 @@ public class UploadController {
 				String[] data = line.split(",");
 				line = line.replaceAll("%", "");
 				// System.out.println(line);
-				line = line + "," + new Date() + ",Kannan,0,0," + data[0] + "-" + data[1] + "\n";
+				line = line + "," + new Date() + ",puser,0,0," + data[0] + "-" + data[1] + "\n";
 				bw.write(line);
 			}
 			bw.close();
@@ -374,7 +374,7 @@ public class UploadController {
 					line = d1[0] + "," + d1[1] + "," + d1[2] + "," + d1[3] + "," + d1[4] + "," + d1[5] + "," + d1[6]
 							+ "," + d1[7] + "," + d1[8] + "," + f + "," + d1[10] + "," + d1[11] + "," + d1[12] + "," + g
 							+ "," + d1[14] + "," + d1[15] + "," + d1[16] + "," + h + "," + i + "," + d1[19] + ","
-							+ new Date() + ",Kannan,0,0," + data[2] + "-" + data[4] + "," + avgTime + "\n";
+							+ new Date() + ",puser,0,0," + data[2] + "-" + data[4] + "," + avgTime + "\n";
 					bw.write(line);
 				}
 				bw.close();
@@ -1209,6 +1209,8 @@ public class UploadController {
 				} else {
 					minStockAfterCapping = safetyStockWeeks;
 				}
+				if(price==0)
+					price=1;
 				double maxStockWeeks = minStockAfterCapping + cycleTime;
 				double minStockAfterCappingCs = Math.round(weeklyAvgForecast * minStockAfterCapping);
 				double maxStockCs = weeklyAvgForecast * maxStockWeeks;
