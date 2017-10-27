@@ -33,7 +33,7 @@
     var i=	document.getElementById("upload-file-input").value;
     alert(i);
       $.ajax({
-        url: "/uploadFile",
+        url: "/uploadFile/puser",
         type: "POST",
         data: new FormData($("#upload-file-form")[0]),
         enctype: 'multipart/form-data',

@@ -45,11 +45,7 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>3.13</version>
 		</dependency>
-		 <dependency>
-            <groupId>postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>9.1-901.jdbc4</version>
-        </dependency>
+		
 
 		 <dependency>
 		 	<groupId>org.apache.commons</groupId>
@@ -74,6 +70,10 @@
                 </exclusions>
 			
  </dependency>
+		  <dependency>
+		  	<groupId>org.postgresql</groupId>
+		  	<artifactId>postgresql</artifactId>
+		  </dependency>
 	</dependencies>
 
 	<build>
@@ -84,6 +84,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
 
 </project>
