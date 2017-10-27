@@ -750,7 +750,9 @@ public class UploadController {
 
 				double sdfePerc = Math.round(mape * 1.25 * factor);
 
-				double sdfe = Math.round((avgForecast / sdfePerc) * 100);
+				//double sdfe = Math.round((avgForecast / sdfePerc) * 100);
+				
+				double sdfe = Math.round(avgForecast * (sdfePerc/100)); 
 
 				String line = sku + "," + skuNo + "," + location + "," + Fore_352016 + "," + sale_352016 + ","
 						+ bias_352016 + "," + biasPerc_352016 + "," + biasPersale_352016 + "," + Fore_362016 + ","
@@ -1277,7 +1279,7 @@ public class UploadController {
 				/* Timestamp Changes - End */
 
 				// pstmt2.executeUpdate();
-				String line1 = SKU + "|" + skuName + "|" + location1 + "|" + locationType + "|" + materialLocation + "|"
+				/*String line1 = SKU + "|" + skuName + "|" + location1 + "|" + locationType + "|" + materialLocation + "|"
 						+ skuClassiication + "|" + source + "|" + category + "|" + serviceLevel + "|"
 						+ weeklyAvgForecast + "|" + sdfePerc + "|" + sdfe + "|" + lotSize + "|" + orValue + "|"
 						+ cycleTime + "|" + avgLeadTime + "|" + leadTimeVariability + "|" + SdVariability + "|"
@@ -1286,7 +1288,15 @@ public class UploadController {
 						+ minStockAfterCapping + "|" + maxStockWeeks + "|" + minStockAfterCappingCs + "|" + maxStockCs
 						+ "|" + currentSSWeeks + "|" + price + "|" + currentSsValue + "|" + proposedIpmSsValue + "|"
 						+ minNormWeeks + "|" + maxNormWeeks + "|" + minStock + "|" + maxStock + "|" + avgCycleStock
-						+ "|" + currentDate;
+						+ "|" + currentDate;*/
+				
+				String line1 = materialLocation+"|0|"+weeklyAvgForecast+"|"+avgCycleStock+"|"+avgLeadTime+"|0|0|"+cFactorSales+"|"+category+
+				"|"+currentSsValue+"|"+currentSSWeeks+"|"+cycleServiceLevel+"|0|0|"+kFactorSales+"|"+leadTimeVariability+"|"+location1+"|"+locationType+"|"+lotSize+
+				"|0|"+maxNormWeeks+"|"+maxStockCs+"|"+maxStock+"|"+maxStockWeeks+"|0|"+minNormWeeks+"|"+minStockAfterCappingCs+"|"+minStockAfterCapping+"|"+
+				minStock+"|"+modelSafetyStock+"|"+safetyStockDays+"|"+safetyStockWeeks+"|"+orValue+"|"+price+"|"+proposedIpmSsValue+"|"+SdVariability+"|"+sdfe+"|"+
+				sdfePerc+"|"+serviceLevel+"|"+skuName+"|"+SKU+"|"+skuClassiication+"|"+source;
+				
+				
 				try {
 					bw1.write(line1 + "\n");
 				} catch (IOException e) {
