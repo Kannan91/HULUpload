@@ -112,7 +112,7 @@ public class UploadController {
 
 				while (nextFile != null) {
 					String fileName = nextFile.getName();
-					newFile = new File(File.separator + fileName);
+					newFile = new File(fileName);
 					System.out.println("Unzipping to " + newFile.getAbsolutePath());
 					if (newFile.getName().contains("Inputfile")) {
 						ipFile = newFile;
