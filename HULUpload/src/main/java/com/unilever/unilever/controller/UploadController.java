@@ -90,7 +90,7 @@ public class UploadController {
 		Date start = new Date();
 		System.out.println(start);
 		long startTime = System.nanoTime();
-		String url = "jdbc:postgresql://hanno.db.elephantsql.com/vnepifvr";
+		String url = "jdbc:postgresql://hanno.db.elephantsql.com:5432/vnepifvr";
 		Properties props = new Properties();
 		props.setProperty("user", "vnepifvr");
 		props.setProperty("password", "n5CEh6y0w-zoORD2Hw1X_WpCT2yvy4wR");
@@ -643,80 +643,83 @@ public class UploadController {
 				double bias_172017 = Math.abs(Fore_172017 - sale_172017);
 				double bias_182017 = Math.abs(Fore_182017 - sale_182017);
 
-				double biasPerc_352016 = Math.round((bias_352016 / Fore_352016) * 100);
+				
+				double biasPerc_352016 = Math.round(((bias_352016!=0?bias_352016:1) / (Fore_352016!=0?Fore_352016:1)) * 100);
+				double biasPerc_362016 = Math.round(((bias_362016!=0?bias_362016:1)/(Fore_362016!=0?Fore_362016:1))*100);
+				double biasPerc_372016 = Math.round(((bias_372016!=0?bias_372016:1)/(Fore_372016!=0?Fore_372016:1))*100);
+				double biasPerc_382016 = Math.round(((bias_382016!=0?bias_382016:1)/(Fore_382016!=0?Fore_382016:1))*100);
+				double biasPerc_392016 = Math.round(((bias_392016!=0?bias_392016:1)/(Fore_392016!=0?Fore_392016:1))*100);
+				double biasPerc_402016 = Math.round(((bias_402016!=0?bias_402016:1)/(Fore_402016!=0?Fore_402016:1))*100);
+				double biasPerc_412016 = Math.round(((bias_412016!=0?bias_412016:1)/(Fore_412016!=0?Fore_412016:1))*100);
+				double biasPerc_422016 = Math.round(((bias_422016!=0?bias_422016:1)/(Fore_422016!=0?Fore_422016:1))*100);
+				double biasPerc_432016 = Math.round(((bias_432016!=0?bias_432016:1)/(Fore_432016!=0?Fore_432016:1))*100);
+				double biasPerc_442016 = Math.round(((bias_442016!=0?bias_442016:1)/(Fore_442016!=0?Fore_442016:1))*100);
+				double biasPerc_452016 = Math.round(((bias_452016!=0?bias_452016:1)/(Fore_452016!=0?Fore_452016:1))*100);
+				double biasPerc_462016 = Math.round(((bias_462016!=0?bias_462016:1)/(Fore_462016!=0?Fore_462016:1))*100);
+				double biasPerc_472016 = Math.round(((bias_472016!=0?bias_472016:1)/(Fore_472016!=0?Fore_472016:1))*100);
+				double biasPerc_482016 = Math.round(((bias_482016!=0?bias_482016:1)/(Fore_482016!=0?Fore_482016:1))*100);
+				double biasPerc_492016 = Math.round(((bias_492016!=0?bias_492016:1)/(Fore_492016!=0?Fore_492016:1))*100);
+				double biasPerc_502016 = Math.round(((bias_502016!=0?bias_502016:1)/(Fore_502016!=0?Fore_502016:1))*100);
+				double biasPerc_512016 = Math.round(((bias_512016!=0?bias_512016:1)/(Fore_512016!=0?Fore_512016:1))*100);
+				double biasPerc_522016 = Math.round(((bias_522016!=0?bias_522016:1)/(Fore_522016!=0?Fore_522016:1))*100);
+				double biasPerc_012017 = Math.round(((bias_012017!=0?bias_012017:1)/(Fore_012017!=0?Fore_012017:1))*100);
+				double biasPerc_022017 = Math.round(((bias_022017!=0?bias_022017:1)/(Fore_022017!=0?Fore_022017:1))*100);
+				double biasPerc_032017 = Math.round(((bias_032017!=0?bias_032017:1)/(Fore_032017!=0?Fore_032017:1))*100);
+				double biasPerc_042017 = Math.round(((bias_042017!=0?bias_042017:1)/(Fore_042017!=0?Fore_042017:1))*100);
+				double biasPerc_052017 = Math.round(((bias_052017!=0?bias_052017:1)/(Fore_052017!=0?Fore_052017:1))*100);
+				double biasPerc_062017 = Math.round(((bias_062017!=0?bias_062017:1)/(Fore_062017!=0?Fore_062017:1))*100);
+				double biasPerc_072017 = Math.round(((bias_072017!=0?bias_072017:1)/(Fore_072017!=0?Fore_072017:1))*100);
+				double biasPerc_082017 = Math.round(((bias_082017!=0?bias_082017:1)/(Fore_082017!=0?Fore_082017:1))*100);
+				double biasPerc_092017 = Math.round(((bias_092017!=0?bias_092017:1)/(Fore_092017!=0?Fore_092017:1))*100);
+				double biasPerc_102017 = Math.round(((bias_102017!=0?bias_102017:1)/(Fore_102017!=0?Fore_102017:1))*100);
+				double biasPerc_112017 = Math.round(((bias_112017!=0?bias_112017:1)/(Fore_112017!=0?Fore_112017:1))*100);
+				double biasPerc_122017 = Math.round(((bias_122017!=0?bias_122017:1)/(Fore_122017!=0?Fore_122017:1))*100);
+				double biasPerc_132017 = Math.round(((bias_132017!=0?bias_132017:1)/(Fore_132017!=0?Fore_132017:1))*100);
+				double biasPerc_142017 = Math.round(((bias_142017!=0?bias_142017:1)/(Fore_142017!=0?Fore_142017:1))*100);
+				double biasPerc_152017 = Math.round(((bias_152017!=0?bias_152017:1)/(Fore_152017!=0?Fore_152017:1))*100);
+				double biasPerc_162017 = Math.round(((bias_162017!=0?bias_162017:1)/(Fore_162017!=0?Fore_162017:1))*100);
+				double biasPerc_172017 = Math.round(((bias_172017!=0?bias_172017:1)/(Fore_172017!=0?Fore_172017:1))*100);
+				double biasPerc_182017 = Math.round(((bias_182017!=0?bias_182017:1)/(Fore_182017!=0?Fore_182017:1))*100);
 
-				double biasPerc_362016 = Math.round((bias_362016 / Fore_362016) * 100);
-				double biasPerc_372016 = Math.round((bias_372016 / Fore_372016) * 100);
-				double biasPerc_382016 = Math.round((bias_382016 / Fore_382016) * 100);
-				double biasPerc_392016 = Math.round((bias_392016 / Fore_392016) * 100);
-				double biasPerc_402016 = Math.round((bias_402016 / Fore_402016) * 100);
-				double biasPerc_412016 = Math.round((bias_412016 / Fore_412016) * 100);
-				double biasPerc_422016 = Math.round((bias_422016 / Fore_422016) * 100);
-				double biasPerc_432016 = Math.round((bias_432016 / Fore_432016) * 100);
-				double biasPerc_442016 = Math.round((bias_442016 / Fore_442016) * 100);
-				double biasPerc_452016 = Math.round((bias_452016 / Fore_452016) * 100);
-				double biasPerc_462016 = Math.round((bias_462016 / Fore_462016) * 100);
-				double biasPerc_472016 = Math.round((bias_472016 / Fore_472016) * 100);
-				double biasPerc_482016 = Math.round((bias_482016 / Fore_482016) * 100);
-				double biasPerc_492016 = Math.round((bias_492016 / Fore_492016) * 100);
-				double biasPerc_502016 = Math.round((bias_502016 / Fore_502016) * 100);
-				double biasPerc_512016 = Math.round((bias_512016 / Fore_512016) * 100);
-				double biasPerc_522016 = Math.round((bias_522016 / Fore_522016) * 100);
-				double biasPerc_012017 = Math.round((bias_012017 / Fore_012017) * 100);
-				double biasPerc_022017 = Math.round((bias_022017 / Fore_022017) * 100);
-				double biasPerc_032017 = Math.round((bias_032017 / Fore_032017) * 100);
-				double biasPerc_042017 = Math.round((bias_042017 / Fore_042017) * 100);
-				double biasPerc_052017 = Math.round((bias_052017 / Fore_052017) * 100);
-				double biasPerc_062017 = Math.round((bias_062017 / Fore_062017) * 100);
-				double biasPerc_072017 = Math.round((bias_072017 / Fore_072017) * 100);
-				double biasPerc_082017 = Math.round((bias_082017 / Fore_082017) * 100);
-				double biasPerc_092017 = Math.round((bias_092017 / Fore_092017) * 100);
-				double biasPerc_102017 = Math.round((bias_102017 / Fore_102017) * 100);
-				double biasPerc_112017 = Math.round((bias_112017 / Fore_112017) * 100);
-				double biasPerc_122017 = Math.round((bias_122017 / Fore_122017) * 100);
-				double biasPerc_132017 = Math.round((bias_132017 / Fore_132017) * 100);
-				double biasPerc_142017 = Math.round((bias_142017 / Fore_142017) * 100);
-				double biasPerc_152017 = Math.round((bias_152017 / Fore_152017) * 100);
-				double biasPerc_162017 = Math.round((bias_162017 / Fore_162017) * 100);
-				double biasPerc_172017 = Math.round((bias_172017 / Fore_172017) * 100);
-				double biasPerc_182017 = Math.round((bias_182017 / Fore_182017) * 100);
 
-				double biasPersale_352016 = (biasPerc_352016 / 100) * sale_352016;
-				double biasPersale_362016 = (biasPerc_362016 / 100) * sale_362016;
-				double biasPersale_372016 = (biasPerc_372016 / 100) * sale_372016;
-				double biasPersale_382016 = (biasPerc_382016 / 100) * sale_382016;
-				double biasPersale_392016 = (biasPerc_392016 / 100) * sale_392016;
-				double biasPersale_402016 = (biasPerc_402016 / 100) * sale_402016;
-				double biasPersale_412016 = (biasPerc_412016 / 100) * sale_412016;
-				double biasPersale_422016 = (biasPerc_422016 / 100) * sale_422016;
-				double biasPersale_432016 = (biasPerc_432016 / 100) * sale_432016;
-				double biasPersale_442016 = (biasPerc_442016 / 100) * sale_442016;
-				double biasPersale_452016 = (biasPerc_452016 / 100) * sale_452016;
-				double biasPersale_462016 = (biasPerc_462016 / 100) * sale_462016;
-				double biasPersale_472016 = (biasPerc_472016 / 100) * sale_472016;
-				double biasPersale_482016 = (biasPerc_482016 / 100) * sale_482016;
-				double biasPersale_492016 = (biasPerc_492016 / 100) * sale_492016;
-				double biasPersale_502016 = (biasPerc_502016 / 100) * sale_502016;
-				double biasPersale_512016 = (biasPerc_512016 / 100) * sale_512016;
-				double biasPersale_522016 = (biasPerc_522016 / 100) * sale_522016;
-				double biasPersale_012017 = (biasPerc_012017 / 100) * sale_012017;
-				double biasPersale_022017 = (biasPerc_022017 / 100) * sale_022017;
-				double biasPersale_032017 = (biasPerc_032017 / 100) * sale_032017;
-				double biasPersale_042017 = (biasPerc_042017 / 100) * sale_042017;
-				double biasPersale_052017 = (biasPerc_052017 / 100) * sale_052017;
-				double biasPersale_062017 = (biasPerc_062017 / 100) * sale_062017;
-				double biasPersale_072017 = (biasPerc_072017 / 100) * sale_072017;
-				double biasPersale_082017 = (biasPerc_082017 / 100) * sale_082017;
-				double biasPersale_092017 = (biasPerc_092017 / 100) * sale_092017;
-				double biasPersale_102017 = (biasPerc_102017 / 100) * sale_102017;
-				double biasPersale_112017 = (biasPerc_112017 / 100) * sale_112017;
-				double biasPersale_122017 = (biasPerc_122017 / 100) * sale_122017;
-				double biasPersale_132017 = (biasPerc_132017 / 100) * sale_132017;
-				double biasPersale_142017 = (biasPerc_142017 / 100) * sale_142017;
-				double biasPersale_152017 = (biasPerc_152017 / 100) * sale_152017;
-				double biasPersale_162017 = (biasPerc_162017 / 100) * sale_162017;
-				double biasPersale_172017 = (biasPerc_172017 / 100) * sale_172017;
-				double biasPersale_182017 = (biasPerc_182017 / 100) * sale_182017;
+				
+				double biasPersale_352016 = ((biasPerc_352016!=0?biasPerc_352016:1)/100) *(sale_352016!=0?sale_352016:1);
+				double biasPersale_362016 = ((biasPerc_362016!=0?biasPerc_362016:1)/100) *(sale_362016!=0?sale_362016:1);
+				double biasPersale_372016 = ((biasPerc_372016!=0?biasPerc_372016:1)/100) *(sale_372016!=0?sale_372016:1);
+				double biasPersale_382016 = ((biasPerc_382016!=0?biasPerc_382016:1)/100) *(sale_382016!=0?sale_382016:1);
+				double biasPersale_392016 = ((biasPerc_392016!=0?biasPerc_392016:1)/100) *(sale_392016!=0?sale_392016:1);
+				double biasPersale_402016 = ((biasPerc_402016!=0?biasPerc_402016:1)/100) *(sale_402016!=0?sale_402016:1);
+				double biasPersale_412016 = ((biasPerc_412016!=0?biasPerc_412016:1)/100) *(sale_412016!=0?sale_412016:1);
+				double biasPersale_422016 = ((biasPerc_422016!=0?biasPerc_422016:1)/100) *(sale_422016!=0?sale_422016:1);
+				double biasPersale_432016 = ((biasPerc_432016!=0?biasPerc_432016:1)/100) *(sale_432016!=0?sale_432016:1);
+				double biasPersale_442016 = ((biasPerc_442016!=0?biasPerc_442016:1)/100) *(sale_442016!=0?sale_442016:1);
+				double biasPersale_452016 = ((biasPerc_452016!=0?biasPerc_452016:1)/100) *(sale_452016!=0?sale_452016:1);
+				double biasPersale_462016 = ((biasPerc_462016!=0?biasPerc_462016:1)/100) *(sale_462016!=0?sale_462016:1);
+				double biasPersale_472016 = ((biasPerc_472016!=0?biasPerc_472016:1)/100) *(sale_472016!=0?sale_472016:1);
+				double biasPersale_482016 = ((biasPerc_482016!=0?biasPerc_482016:1)/100) *(sale_482016!=0?sale_482016:1);
+				double biasPersale_492016 = ((biasPerc_492016!=0?biasPerc_492016:1)/100) *(sale_492016!=0?sale_492016:1);
+				double biasPersale_502016 = ((biasPerc_502016!=0?biasPerc_502016:1)/100) *(sale_502016!=0?sale_502016:1);
+				double biasPersale_512016 = ((biasPerc_512016!=0?biasPerc_512016:1)/100) *(sale_512016!=0?sale_512016:1);
+				double biasPersale_522016 = ((biasPerc_522016!=0?biasPerc_522016:1)/100) *(sale_522016!=0?sale_522016:1);
+				double biasPersale_012017 = ((biasPerc_012017!=0?biasPerc_012017:1)/100) *(sale_012017!=0?sale_012017:1);
+				double biasPersale_022017 = ((biasPerc_022017!=0?biasPerc_022017:1)/100) *(sale_022017!=0?sale_022017:1);
+				double biasPersale_032017 = ((biasPerc_032017!=0?biasPerc_032017:1)/100) *(sale_032017!=0?sale_032017:1);
+				double biasPersale_042017 = ((biasPerc_042017!=0?biasPerc_042017:1)/100) *(sale_042017!=0?sale_042017:1);
+				double biasPersale_052017 = ((biasPerc_052017!=0?biasPerc_052017:1)/100) *(sale_052017!=0?sale_052017:1);
+				double biasPersale_062017 = ((biasPerc_062017!=0?biasPerc_062017:1)/100) *(sale_062017!=0?sale_062017:1);
+				double biasPersale_072017 = ((biasPerc_072017!=0?biasPerc_072017:1)/100) *(sale_072017!=0?sale_072017:1);
+				double biasPersale_082017 = ((biasPerc_082017!=0?biasPerc_082017:1)/100) *(sale_082017!=0?sale_082017:1);
+				double biasPersale_092017 = ((biasPerc_092017!=0?biasPerc_092017:1)/100) *(sale_092017!=0?sale_092017:1);
+				double biasPersale_102017 = ((biasPerc_102017!=0?biasPerc_102017:1)/100) *(sale_102017!=0?sale_102017:1);
+				double biasPersale_112017 = ((biasPerc_112017!=0?biasPerc_112017:1)/100) *(sale_112017!=0?sale_112017:1);
+				double biasPersale_122017 = ((biasPerc_122017!=0?biasPerc_122017:1)/100) *(sale_122017!=0?sale_122017:1);
+				double biasPersale_132017 = ((biasPerc_132017!=0?biasPerc_132017:1)/100) *(sale_132017!=0?sale_132017:1);
+				double biasPersale_142017 = ((biasPerc_142017!=0?biasPerc_142017:1)/100) *(sale_142017!=0?sale_142017:1);
+				double biasPersale_152017 = ((biasPerc_152017!=0?biasPerc_152017:1)/100) *(sale_152017!=0?sale_152017:1);
+				double biasPersale_162017 = ((biasPerc_162017!=0?biasPerc_162017:1)/100) *(sale_162017!=0?sale_162017:1);
+				double biasPersale_172017 = ((biasPerc_172017!=0?biasPerc_172017:1)/100) *(sale_172017!=0?sale_172017:1);
+				double biasPersale_182017 = ((biasPerc_182017!=0?biasPerc_182017:1)/100) *(sale_182017!=0?sale_182017:1);
+
 
 				double totalForecast = Fore_352016 + Fore_362016 + Fore_372016 + Fore_382016 + Fore_392016 + Fore_402016
 						+ Fore_412016 + Fore_422016 + Fore_432016 + Fore_442016 + Fore_452016 + Fore_462016
@@ -804,373 +807,7 @@ public class UploadController {
 						+ biasPerc_182017 + "," + biasPersale_182017 + "," + mape + "," + sdfe + "," + sdfePerc + ","
 						+ totalForecast + "," + totalSales + "," + factor + "," + avgForecast + "," + 36 + ","
 						+ weeklyAvgForecast + "," + currentDate;
-				// System.out.println("sku :"+sku+"skuNo :"+skuNo+"location
-				// :"+location+"Fore_352016 :"+Fore_352016+"sale_352016
-				// :"+sale_352016+"bias_352016 :"+bias_352016+"biasPerc_352016
-				// :"+biasPerc_352016+"biasPersale_352016
-				// :"+biasPersale_352016+"Fore_362016
-				// :"+Fore_362016+"sale_362016 :"+sale_362016+"bias_362016
-				// :"+bias_362016+"biasPerc_362016
-				// :"+biasPerc_362016+"biasPersale_362016
-				// :"+biasPersale_362016+"Fore_372016
-				// :"+Fore_372016+"sale_372016 :"+sale_372016+"bias_372016
-				// :"+bias_372016+"biasPerc_372016
-				// :"+biasPerc_372016+"biasPersale_372016
-				// :"+biasPersale_372016+"Fore_382016
-				// :"+Fore_382016+"sale_382016 :"+sale_382016+"bias_382016
-				// :"+bias_382016+"biasPerc_382016
-				// :"+biasPerc_382016+"biasPersale_382016
-				// :"+biasPersale_382016+"Fore_392016
-				// :"+Fore_392016+"sale_392016 :"+sale_392016+"bias_392016
-				// :"+bias_392016+"biasPerc_392016
-				// :"+biasPerc_392016+"biasPersale_392016
-				// :"+biasPersale_392016+"Fore_402016
-				// :"+Fore_402016+"sale_402016 :"+sale_402016+"bias_402016
-				// :"+bias_402016+"biasPerc_402016
-				// :"+biasPerc_402016+"biasPersale_402016
-				// :"+biasPersale_402016+"Fore_412016
-				// :"+Fore_412016+"sale_412016 :"+sale_412016+"bias_412016
-				// :"+bias_412016+"biasPerc_412016
-				// :"+biasPerc_412016+"biasPersale_412016
-				// :"+biasPersale_412016+"Fore_422016
-				// :"+Fore_422016+"sale_422016 :"+sale_422016+"bias_422016
-				// :"+bias_422016+"biasPerc_422016
-				// :"+biasPerc_422016+"biasPersale_422016
-				// :"+biasPersale_422016+"Fore_432016
-				// :"+Fore_432016+"sale_432016 :"+sale_432016+"bias_432016
-				// :"+bias_432016+"biasPerc_432016
-				// :"+biasPerc_432016+"biasPersale_432016
-				// :"+biasPersale_432016+"Fore_442016
-				// :"+Fore_442016+"sale_442016 :"+sale_442016+"bias_442016
-				// :"+bias_442016+"biasPerc_442016
-				// :"+biasPerc_442016+"biasPersale_442016
-				// :"+biasPersale_442016+"Fore_452016
-				// :"+Fore_452016+"sale_452016 :"+sale_452016+"bias_452016
-				// :"+bias_452016+"biasPerc_452016
-				// :"+biasPerc_452016+"biasPersale_452016
-				// :"+biasPersale_452016+"Fore_462016
-				// :"+Fore_462016+"sale_462016 :"+sale_462016+"bias_462016
-				// :"+bias_462016+"biasPerc_462016
-				// :"+biasPerc_462016+"biasPersale_462016
-				// :"+biasPersale_462016+"Fore_472016
-				// :"+Fore_472016+"sale_472016 :"+sale_472016+"bias_472016
-				// :"+bias_472016+"biasPerc_472016
-				// :"+biasPerc_472016+"biasPersale_472016
-				// :"+biasPersale_472016+"Fore_482016
-				// :"+Fore_482016+"sale_482016 :"+sale_482016+"bias_482016
-				// :"+bias_482016+"biasPerc_482016
-				// :"+biasPerc_482016+"biasPersale_482016
-				// :"+biasPersale_482016+"Fore_492016
-				// :"+Fore_492016+"sale_492016 :"+sale_492016+"bias_492016
-				// :"+bias_492016+"biasPerc_492016
-				// :"+biasPerc_492016+"biasPersale_492016
-				// :"+biasPersale_492016+"Fore_502016
-				// :"+Fore_502016+"sale_502016 :"+sale_502016+"bias_502016
-				// :"+bias_502016+"biasPerc_502016
-				// :"+biasPerc_502016+"biasPersale_502016
-				// :"+biasPersale_502016+"Fore_512016
-				// :"+Fore_512016+"sale_512016 :"+sale_512016+"bias_512016
-				// :"+bias_512016+"biasPerc_512016
-				// :"+biasPerc_512016+"biasPersale_512016
-				// :"+biasPersale_512016+"Fore_522016
-				// :"+Fore_522016+"sale_522016 :"+sale_522016+"bias_522016
-				// :"+bias_522016+"biasPerc_522016
-				// :"+biasPerc_522016+"biasPersale_522016
-				// :"+biasPersale_522016+"Fore_012017
-				// :"+Fore_012017+"sale_012017 :"+sale_012017+"bias_012017
-				// :"+bias_012017+"biasPerc_012017
-				// :"+biasPerc_012017+"biasPersale_012017
-				// :"+biasPersale_012017+"Fore_022017
-				// :"+Fore_022017+"sale_022017 :"+sale_022017+"bias_022017
-				// :"+bias_022017+"biasPerc_022017
-				// :"+biasPerc_022017+"biasPersale_022017
-				// :"+biasPersale_022017+"Fore_032017
-				// :"+Fore_032017+"sale_032017 :"+sale_032017+"bias_032017
-				// :"+bias_032017+"biasPerc_032017
-				// :"+biasPerc_032017+"biasPersale_032017
-				// :"+biasPersale_032017+"Fore_042017
-				// :"+Fore_042017+"sale_042017 :"+sale_042017+"bias_042017
-				// :"+bias_042017+"biasPerc_042017
-				// :"+biasPerc_042017+"biasPersale_042017
-				// :"+biasPersale_042017+"Fore_052017
-				// :"+Fore_052017+"sale_052017 :"+sale_052017+"bias_052017
-				// :"+bias_052017+"biasPerc_052017
-				// :"+biasPerc_052017+"biasPersale_052017
-				// :"+biasPersale_052017+"Fore_062017
-				// :"+Fore_062017+"sale_062017 :"+sale_062017+"bias_062017
-				// :"+bias_062017+"biasPerc_062017
-				// :"+biasPerc_062017+"biasPersale_062017
-				// :"+biasPersale_062017+"Fore_072017
-				// :"+Fore_072017+"sale_072017 :"+sale_072017+"bias_072017
-				// :"+bias_072017+"biasPerc_072017
-				// :"+biasPerc_072017+"biasPersale_072017
-				// :"+biasPersale_072017+"Fore_082017
-				// :"+Fore_082017+"sale_082017 :"+sale_082017+"bias_082017
-				// :"+bias_082017+"biasPerc_082017
-				// :"+biasPerc_082017+"biasPersale_082017
-				// :"+biasPersale_082017+"Fore_092017
-				// :"+Fore_092017+"sale_092017 :"+sale_092017+"bias_092017
-				// :"+bias_092017+"biasPerc_092017
-				// :"+biasPerc_092017+"biasPersale_092017
-				// :"+biasPersale_092017+"Fore_102017
-				// :"+Fore_102017+"sale_102017 :"+sale_102017+"bias_102017
-				// :"+bias_102017+"biasPerc_102017
-				// :"+biasPerc_102017+"biasPersale_102017
-				// :"+biasPersale_102017+"Fore_112017
-				// :"+Fore_112017+"sale_112017 :"+sale_112017+"bias_112017
-				// :"+bias_112017+"biasPerc_112017
-				// :"+biasPerc_112017+"biasPersale_112017
-				// :"+biasPersale_112017+"Fore_122017
-				// :"+Fore_122017+"sale_122017 :"+sale_122017+"bias_122017
-				// :"+bias_122017+"biasPerc_122017
-				// :"+biasPerc_122017+"biasPersale_122017
-				// :"+biasPersale_122017+"Fore_132017
-				// :"+Fore_132017+"sale_132017 :"+sale_132017+"bias_132017
-				// :"+bias_132017+"biasPerc_132017
-				// :"+biasPerc_132017+"biasPersale_132017
-				// :"+biasPersale_132017+"Fore_142017
-				// :"+Fore_142017+"sale_142017 :"+sale_142017+"bias_142017
-				// :"+bias_142017+"biasPerc_142017
-				// :"+biasPerc_142017+"biasPersale_142017
-				// :"+biasPersale_142017+"Fore_152017
-				// :"+Fore_152017+"sale_152017 :"+sale_152017+"bias_152017
-				// :"+bias_152017+"biasPerc_152017
-				// :"+biasPerc_152017+"biasPersale_152017
-				// :"+biasPersale_152017+"Fore_162017
-				// :"+Fore_162017+"sale_162017 :"+sale_162017+"bias_162017
-				// :"+bias_162017+"biasPerc_162017
-				// :"+biasPerc_162017+"biasPersale_162017
-				// :"+biasPersale_162017+"Fore_172017
-				// :"+Fore_172017+"sale_172017 :"+sale_172017+"bias_172017
-				// :"+bias_172017+"biasPerc_172017
-				// :"+biasPerc_172017+"biasPersale_172017
-				// :"+biasPersale_172017+"Fore_182017
-				// :"+Fore_182017+"sale_182017 :"+sale_182017+"bias_182017
-				// :"+bias_182017+"biasPerc_182017
-				// :"+biasPerc_182017+"biasPersale_182017
-				// :"+biasPersale_182017+"mape :"+mape+"sdfe :"+sdfe+"sdfePerc
-				// :"+sdfePerc+"totalForecast :"+totalForecast+"totalSales
-				// :"+totalSales+"factor :"+factor+"avgForecast
-				// :"+avgForecast+"Count :"+36+"weeklyAvgForecast
-				// :"+weeklyAvgForecast+"currentDate :"+currentDate);
-				// System.out.println("totalForecast :" +totalForecast +
-				// "avgForecast :" + avgForecast + "weeklyAvgForecast : " +
-				// weeklyAvgForecast + "factor :" + factor + "totalForecast:" +
-				// totalForecast +"totalSales:" + totalSales + "biasPerSale :" +
-				// biasPerSale + "mape :" + mape + "sdfePerc :" + sdfePerc + "
-				// sdfe :"+ sdfe);
-
-				// String sql2 = "update BIAS_CALCULATION SET
-				// Bias_Calc_WEEK_352016=?, Bias_Perc_WEEK_352016=?,
-				// Bias_Per_Sale_WEEK_352016=?, Bias_Calc_WEEK_362016=?,
-				// Bias_Perc_WEEK_362016=?, Bias_Per_Sale_WEEK_362016=?,
-				// Bias_Calc_WEEK_372016=?, Bias_Perc_WEEK_372016=?,
-				// Bias_Per_Sale_WEEK_372016=?, Bias_Calc_WEEK_382016=?,
-				// Bias_Perc_WEEK_382016=?, Bias_Per_Sale_WEEK_382016=?,
-				// Bias_Calc_WEEK_392016=?, Bias_Perc_WEEK_392016=?,
-				// Bias_Per_Sale_WEEK_392016=?, Bias_Calc_WEEK_402016=?,
-				// Bias_Perc_WEEK_402016=?, Bias_Per_Sale_WEEK_402016=?,
-				// Bias_Calc_WEEK_412016=?, Bias_Perc_WEEK_412016=?,
-				// Bias_Per_Sale_WEEK_412016=?, Bias_Calc_WEEK_422016=?,
-				// Bias_Perc_WEEK_422016=?,
-				// Bias_Per_Sale_WEEK_422016=?,Bias_Calc_WEEK_432016=?,
-				// Bias_Perc_WEEK_432016=?, Bias_Per_Sale_WEEK_432016=?,
-				// Bias_Calc_WEEK_442016=?, Bias_Perc_WEEK_442016=?,
-				// Bias_Per_Sale_WEEK_442016=?, Bias_Calc_WEEK_452016=?,
-				// Bias_Perc_WEEK_452016=?,
-				// Bias_Per_Sale_WEEK_452016=?,Bias_Calc_WEEK_462016=?,
-				// Bias_Perc_WEEK_462016=?,
-				// Bias_Per_Sale_WEEK_462016=?,Bias_Calc_WEEK_472016=?,
-				// Bias_Perc_WEEK_472016=?,
-				// Bias_Per_Sale_WEEK_472016=?,Bias_Calc_WEEK_482016=?,
-				// Bias_Perc_WEEK_482016=?,
-				// Bias_Per_Sale_WEEK_482016=?,Bias_Calc_WEEK_492016=?,
-				// Bias_Perc_WEEK_492016=?,
-				// Bias_Per_Sale_WEEK_492016=?,Bias_Calc_WEEK_502016=?,
-				// Bias_Perc_WEEK_502016=?,
-				// Bias_Per_Sale_WEEK_502016=?,Bias_Calc_WEEK_512016=?,
-				// Bias_Perc_WEEK_512016=?,
-				// Bias_Per_Sale_WEEK_512016=?,Bias_Calc_WEEK_522016=?,
-				// Bias_Perc_WEEK_522016=?,
-				// Bias_Per_Sale_WEEK_522016=?,Bias_Calc_WEEK_012017=?,
-				// Bias_Perc_WEEK_012017=?,
-				// Bias_Per_Sale_WEEK_012017=?,Bias_Calc_WEEK_022017=?,
-				// Bias_Perc_WEEK_022017=?,
-				// Bias_Per_Sale_WEEK_022017=?,Bias_Calc_WEEK_032017=?,
-				// Bias_Perc_WEEK_032017=?,
-				// Bias_Per_Sale_WEEK_032017=?,Bias_Calc_WEEK_042017=?,
-				// Bias_Perc_WEEK_042017=?,
-				// Bias_Per_Sale_WEEK_042017=?,Bias_Calc_WEEK_052017=?,
-				// Bias_Perc_WEEK_052017=?,
-				// Bias_Per_Sale_WEEK_052017=?,Bias_Calc_WEEK_062017=?,
-				// Bias_Perc_WEEK_062017=?,
-				// Bias_Per_Sale_WEEK_062017=?,Bias_Calc_WEEK_072017=?,
-				// Bias_Perc_WEEK_072017=?,
-				// Bias_Per_Sale_WEEK_072017=?,Bias_Calc_WEEK_082017=?,
-				// Bias_Perc_WEEK_082017=?,
-				// Bias_Per_Sale_WEEK_082017=?,Bias_Calc_WEEK_092017=?,
-				// Bias_Perc_WEEK_092017=?,
-				// Bias_Per_Sale_WEEK_092017=?,Bias_Calc_WEEK_102017=?,
-				// Bias_Perc_WEEK_102017=?,
-				// Bias_Per_Sale_WEEK_102017=?,Bias_Calc_WEEK_112017=?,
-				// Bias_Perc_WEEK_112017=?,
-				// Bias_Per_Sale_WEEK_112017=?,Bias_Calc_WEEK_122017=?,
-				// Bias_Perc_WEEK_122017=?,
-				// Bias_Per_Sale_WEEK_122017=?,Bias_Calc_WEEK_132017=?,
-				// Bias_Perc_WEEK_132017=?,
-				// Bias_Per_Sale_WEEK_132017=?,Bias_Calc_WEEK_142017=?,
-				// Bias_Perc_WEEK_142017=?,
-				// Bias_Per_Sale_WEEK_142017=?,Bias_Calc_WEEK_152017=?,
-				// Bias_Perc_WEEK_152017=?,
-				// Bias_Per_Sale_WEEK_152017=?,Bias_Calc_WEEK_162017=?,
-				// Bias_Perc_WEEK_162017=?,
-				// Bias_Per_Sale_WEEK_162017=?,Bias_Calc_WEEK_172017=?,
-				// Bias_Perc_WEEK_172017=?,
-				// Bias_Per_Sale_WEEK_172017=?,Bias_Calc_WEEK_182017=?,
-				// Bias_Perc_WEEK_182017=?,
-				// Bias_Per_Sale_WEEK_182017=?,Weighted_Mape=?, SDFE=?,
-				// SDFE_Perc=?, Total_Past_Forecast=?, Total_Past_sales=?,
-				// Factor=?, Avg_Forecast=?, Count=?, Weekly_Avg_Forecast=?
-				// where SKU_NO='"+skuNo+"'";
-				/*
-				 * 
-				 * pstmt1.setString(1, sku); pstmt1.setString(2, skuNo);
-				 * pstmt1.setString(3, location); pstmt1.setDouble(4,
-				 * Fore_352016); pstmt1.setDouble(5, sale_352016);
-				 * pstmt1.setDouble(6, bias_352016); pstmt1.setDouble(7,
-				 * biasPerc_352016); pstmt1.setDouble(8, biasPersale_352016);
-				 * pstmt1.setDouble(9, Fore_362016); pstmt1.setDouble(10,
-				 * sale_362016); pstmt1.setDouble(11, bias_362016);
-				 * pstmt1.setDouble(12, biasPerc_362016); pstmt1.setDouble(13,
-				 * biasPersale_362016); pstmt1.setDouble(14, Fore_372016);
-				 * pstmt1.setDouble(15, sale_372016); pstmt1.setDouble(16,
-				 * bias_372016); pstmt1.setDouble(17, biasPerc_372016);
-				 * pstmt1.setDouble(18, biasPersale_372016);
-				 * pstmt1.setDouble(19, Fore_382016); pstmt1.setDouble(20,
-				 * sale_382016); pstmt1.setDouble(21, bias_382016);
-				 * pstmt1.setDouble(22, biasPerc_382016); pstmt1.setDouble(23,
-				 * biasPersale_382016); pstmt1.setDouble(24, Fore_392016);
-				 * pstmt1.setDouble(25, sale_392016); pstmt1.setDouble(26,
-				 * bias_392016); pstmt1.setDouble(27, biasPerc_392016);
-				 * pstmt1.setDouble(28, biasPersale_392016);
-				 * pstmt1.setDouble(29, Fore_402016); pstmt1.setDouble(30,
-				 * sale_402016); pstmt1.setDouble(31, bias_402016);
-				 * pstmt1.setDouble(32, biasPerc_402016); pstmt1.setDouble(33,
-				 * biasPersale_402016); pstmt1.setDouble(34, Fore_412016);
-				 * pstmt1.setDouble(35, sale_412016); pstmt1.setDouble(36,
-				 * bias_412016); pstmt1.setDouble(37, biasPerc_412016);
-				 * pstmt1.setDouble(38, biasPersale_412016);
-				 * pstmt1.setDouble(39, Fore_422016); pstmt1.setDouble(40,
-				 * sale_422016); pstmt1.setDouble(41, bias_422016);
-				 * pstmt1.setDouble(42, biasPerc_422016); pstmt1.setDouble(43,
-				 * biasPersale_422016); pstmt1.setDouble(44, Fore_432016);
-				 * pstmt1.setDouble(45, sale_432016); pstmt1.setDouble(46,
-				 * bias_432016); pstmt1.setDouble(47, biasPerc_432016);
-				 * pstmt1.setDouble(48, biasPersale_432016);
-				 * pstmt1.setDouble(49, Fore_442016); pstmt1.setDouble(50,
-				 * sale_442016); pstmt1.setDouble(51, bias_442016);
-				 * pstmt1.setDouble(52, biasPerc_442016); pstmt1.setDouble(53,
-				 * biasPersale_442016); pstmt1.setDouble(54, Fore_452016);
-				 * pstmt1.setDouble(55, sale_452016); pstmt1.setDouble(56,
-				 * bias_452016); pstmt1.setDouble(57, biasPerc_452016);
-				 * pstmt1.setDouble(58, biasPersale_452016);
-				 * pstmt1.setDouble(59, Fore_462016); pstmt1.setDouble(60,
-				 * sale_462016); pstmt1.setDouble(61, bias_462016);
-				 * pstmt1.setDouble(62, biasPerc_462016); pstmt1.setDouble(63,
-				 * biasPersale_462016); pstmt1.setDouble(64, Fore_472016);
-				 * pstmt1.setDouble(65, sale_472016); pstmt1.setDouble(66,
-				 * bias_472016); pstmt1.setDouble(67, biasPerc_472016);
-				 * pstmt1.setDouble(68, biasPersale_472016);
-				 * pstmt1.setDouble(69, Fore_482016); pstmt1.setDouble(70,
-				 * sale_482016); pstmt1.setDouble(71, bias_482016);
-				 * pstmt1.setDouble(72, biasPerc_482016); pstmt1.setDouble(73,
-				 * biasPersale_482016); pstmt1.setDouble(74, Fore_492016);
-				 * pstmt1.setDouble(75, sale_492016); pstmt1.setDouble(76,
-				 * bias_492016); pstmt1.setDouble(77, biasPerc_492016);
-				 * pstmt1.setDouble(78, biasPersale_492016);
-				 * pstmt1.setDouble(79, Fore_502016); pstmt1.setDouble(80,
-				 * sale_502016); pstmt1.setDouble(81, bias_502016);
-				 * pstmt1.setDouble(82, biasPerc_502016); pstmt1.setDouble(83,
-				 * biasPersale_502016); pstmt1.setDouble(84, Fore_512016);
-				 * pstmt1.setDouble(85, sale_512016); pstmt1.setDouble(86,
-				 * bias_512016); pstmt1.setDouble(87, biasPerc_512016);
-				 * pstmt1.setDouble(88, biasPersale_512016);
-				 * pstmt1.setDouble(89, Fore_522016); pstmt1.setDouble(90,
-				 * sale_522016); pstmt1.setDouble(91, bias_522016);
-				 * pstmt1.setDouble(92, biasPerc_522016); pstmt1.setDouble(93,
-				 * biasPersale_522016); pstmt1.setDouble(94, Fore_012017);
-				 * pstmt1.setDouble(95, sale_012017); pstmt1.setDouble(96,
-				 * bias_012017); pstmt1.setDouble(97, biasPerc_012017);
-				 * pstmt1.setDouble(98, biasPersale_012017);
-				 * pstmt1.setDouble(99, Fore_022017); pstmt1.setDouble(100,
-				 * sale_022017); pstmt1.setDouble(101, bias_022017);
-				 * pstmt1.setDouble(102, biasPerc_022017); pstmt1.setDouble(103,
-				 * biasPersale_022017); pstmt1.setDouble(104, Fore_032017);
-				 * pstmt1.setDouble(105, sale_032017); pstmt1.setDouble(106,
-				 * bias_032017); pstmt1.setDouble(107, biasPerc_032017);
-				 * pstmt1.setDouble(108, biasPersale_032017);
-				 * pstmt1.setDouble(109, Fore_042017); pstmt1.setDouble(110,
-				 * sale_042017); pstmt1.setDouble(111, bias_042017);
-				 * pstmt1.setDouble(112, biasPerc_042017); pstmt1.setDouble(113,
-				 * biasPersale_042017); pstmt1.setDouble(114, Fore_052017);
-				 * pstmt1.setDouble(115, sale_052017); pstmt1.setDouble(116,
-				 * bias_052017); pstmt1.setDouble(117, biasPerc_052017);
-				 * pstmt1.setDouble(118, biasPersale_052017);
-				 * pstmt1.setDouble(119, Fore_062017); pstmt1.setDouble(120,
-				 * sale_062017); pstmt1.setDouble(121, bias_062017);
-				 * pstmt1.setDouble(122, biasPerc_062017); pstmt1.setDouble(123,
-				 * biasPersale_062017); pstmt1.setDouble(124, Fore_072017);
-				 * pstmt1.setDouble(125, sale_072017); pstmt1.setDouble(126,
-				 * bias_072017); pstmt1.setDouble(127, biasPerc_072017);
-				 * pstmt1.setDouble(128, biasPersale_072017);
-				 * pstmt1.setDouble(129, Fore_082017); pstmt1.setDouble(130,
-				 * sale_082017); pstmt1.setDouble(131, bias_082017);
-				 * pstmt1.setDouble(132, biasPerc_082017); pstmt1.setDouble(133,
-				 * biasPersale_082017); pstmt1.setDouble(134, Fore_092017);
-				 * pstmt1.setDouble(135, sale_092017); pstmt1.setDouble(136,
-				 * bias_092017); pstmt1.setDouble(137, biasPerc_092017);
-				 * pstmt1.setDouble(138, biasPersale_092017);
-				 * pstmt1.setDouble(139, Fore_102017); pstmt1.setDouble(140,
-				 * sale_102017); pstmt1.setDouble(141, bias_102017);
-				 * pstmt1.setDouble(142, biasPerc_102017); pstmt1.setDouble(143,
-				 * biasPersale_102017); pstmt1.setDouble(144, Fore_112017);
-				 * pstmt1.setDouble(145, sale_112017); pstmt1.setDouble(146,
-				 * bias_112017); pstmt1.setDouble(147, biasPerc_112017);
-				 * pstmt1.setDouble(148, biasPersale_112017);
-				 * pstmt1.setDouble(149, Fore_122017); pstmt1.setDouble(150,
-				 * sale_122017); pstmt1.setDouble(151, bias_122017);
-				 * pstmt1.setDouble(152, biasPerc_122017); pstmt1.setDouble(153,
-				 * biasPersale_122017); pstmt1.setDouble(154, Fore_132017);
-				 * pstmt1.setDouble(155, sale_132017); pstmt1.setDouble(156,
-				 * bias_132017); pstmt1.setDouble(157, biasPerc_132017);
-				 * pstmt1.setDouble(158, biasPersale_132017);
-				 * pstmt1.setDouble(159, Fore_142017); pstmt1.setDouble(160,
-				 * sale_142017); pstmt1.setDouble(161, bias_142017);
-				 * pstmt1.setDouble(162, biasPerc_142017); pstmt1.setDouble(163,
-				 * biasPersale_142017); pstmt1.setDouble(164, Fore_152017);
-				 * pstmt1.setDouble(165, sale_152017); pstmt1.setDouble(166,
-				 * bias_152017); pstmt1.setDouble(167, biasPerc_152017);
-				 * pstmt1.setDouble(168, biasPersale_152017);
-				 * pstmt1.setDouble(169, Fore_162017); pstmt1.setDouble(170,
-				 * sale_162017); pstmt1.setDouble(171, bias_162017);
-				 * pstmt1.setDouble(172, biasPerc_162017); pstmt1.setDouble(173,
-				 * biasPersale_162017); pstmt1.setDouble(174, Fore_172017);
-				 * pstmt1.setDouble(175, sale_172017); pstmt1.setDouble(176,
-				 * bias_172017); pstmt1.setDouble(177, biasPerc_172017);
-				 * pstmt1.setDouble(178, biasPersale_172017);
-				 * pstmt1.setDouble(179, Fore_182017); pstmt1.setDouble(180,
-				 * sale_182017); pstmt1.setDouble(181, bias_182017);
-				 * pstmt1.setDouble(182, biasPerc_182017); pstmt1.setDouble(183,
-				 * biasPersale_182017); pstmt1.setDouble(184, mape);
-				 * pstmt1.setDouble(185, sdfe); pstmt1.setDouble(186, sdfePerc);
-				 * pstmt1.setDouble(187, totalForecast); pstmt1.setDouble(188,
-				 * totalSales); pstmt1.setDouble(189, factor);
-				 * pstmt1.setDouble(190, avgForecast); pstmt1.setInt(191, 36);
-				 * pstmt1.setDouble(192, weeklyAvgForecast);
-				 * pstmt1.setTimestamp(193, currentDate);
-				 * 
-				 * pstmt1.executeUpdate();
-				 */
+				
 				/* IPM MODEL CALCULATIONS */
 
 				// System.out.println("IPM Calculations Started");
@@ -1190,7 +827,19 @@ public class UploadController {
 						+ (biasPerc_032017) + (biasPerc_042017) + (biasPerc_052017) + (biasPerc_062017)
 						+ (biasPerc_072017) + (biasPerc_082017) + (biasPerc_092017) + (biasPerc_102017)
 						+ (biasPerc_112017) + (biasPerc_122017) + (biasPerc_132017) + (biasPerc_142017)
-						+ (biasPerc_152017) + (biasPerc_162017) + (biasPerc_172017) + (biasPerc_182017)) / 36;
+						+ (biasPerc_152017) + (biasPerc_162017) + (biasPerc_172017) + (biasPerc_182017)) / 36D;
+				
+				System.out.println("biasPerc_352016 "+(biasPerc_352016)+" biasPerc_362016 "+ (biasPerc_362016)+" biasPerc_372016 "+ (biasPerc_372016)+" biasPerc_382016 "+ (biasPerc_382016)+
+						" biasPerc_392016 "	+ (biasPerc_392016)+" biasPerc_402016 "+ (biasPerc_402016)+" biasPerc_412016 "+ (biasPerc_412016)+" biasPerc_422016 "+ (biasPerc_422016)+
+						" biasPerc_432016 "	+ (biasPerc_432016)+" biasPerc_442016 "+ (biasPerc_442016)+" biasPerc_452016 "+ (biasPerc_452016)+" biasPerc_462016 "+ (biasPerc_462016)+
+						" biasPerc_472016 "	+ (biasPerc_472016)+" biasPerc_482016 "+ (biasPerc_482016)+" biasPerc_492016 "+ (biasPerc_492016)+" biasPerc_502016 "+ (biasPerc_502016)+
+						" biasPerc_512016 "	+ (biasPerc_512016)+" biasPerc_522016 "+ (biasPerc_522016)+" biasPerc_012017 "+ (biasPerc_012017)+" biasPerc_022017 "+ (biasPerc_022017)+
+						" biasPerc_032017 "	+ (biasPerc_032017)+" biasPerc_042017 "+ (biasPerc_042017)+" biasPerc_052017 "+ (biasPerc_052017)+" biasPerc_062017 "+ (biasPerc_062017)+
+						" biasPerc_072017 "	+ (biasPerc_072017)+" biasPerc_082017 "+ (biasPerc_082017)+" biasPerc_092017 "+ (biasPerc_092017)+" biasPerc_102017 "+ (biasPerc_102017)+
+						" biasPerc_112017 "	+ (biasPerc_112017)+" biasPerc_122017 "+ (biasPerc_122017)+" biasPerc_132017 "+ (biasPerc_132017)+" biasPerc_142017 "+ (biasPerc_142017)+
+						" biasPerc_152017 "	+ (biasPerc_152017)+" biasPerc_162017 "+ (biasPerc_162017)+" biasPerc_172017 "+ (biasPerc_172017)+" biasPerc_182017 "+ (biasPerc_182017));
+			
+				System.out.println("Bias percentage "+biasPerc);
 				double adjustedSdfe;
 				double finalSdfe = 0;
 				if (((sdfePerc) - (biasPerc)) < 0) {
