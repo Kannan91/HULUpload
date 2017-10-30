@@ -112,7 +112,7 @@ public class UploadController {
 
 				while (nextFile != null) {
 					String fileName = nextFile.getName();
-					newFile = new File(fileName);
+					newFile = new File("."+File.separator + fileName);
 					System.out.println("Unzipping to " + newFile.getAbsolutePath());
 					if (newFile.getName().contains("Inputfile")) {
 						ipFile = newFile;
@@ -125,7 +125,7 @@ public class UploadController {
 					}
 
 					// create directories for sub directories in zip
-					new File(newFile.getParent()).mkdirs();
+//					new File(newFile.getParent()).mkdirs();
 					FileOutputStream fos = new FileOutputStream(newFile);
 					int len;
 					while ((len = zis.read(buffer)) > 0) {
